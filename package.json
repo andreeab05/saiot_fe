@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "install": "npm install --legacy-peer-deps",
-    "build": "vite build"
+    "build": "vite build",
+    "start": "vite"
   },
   "dependencies": {
     "qrcode.react": "^4.2.0",
