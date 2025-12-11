@@ -87,6 +87,7 @@ export default function SubmitForm() {
         },
         body: JSON.stringify({
           value: Number(val),
+          label: null,
           meta: { userAgent: navigator.userAgent },
         }),
       });
