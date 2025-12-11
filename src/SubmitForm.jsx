@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import QRCode from "qrcode.react";
+import QRCode from "react-qr-code";
 
 const API_ORIGIN = import.meta.env.VITE_API_ORIGIN || "/";
-const API_KEY = import.meta.env.VITE_API_KEY || "";
+// const API_KEY = import.meta.env.VITE_API_KEY || "";
 
 export default function SubmitForm(){
   const [val, setVal] = useState(5);
@@ -16,7 +16,7 @@ export default function SubmitForm(){
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          ...(API_KEY ? { "x-api-key": API_KEY } : {})
+        //   ...(API_KEY ? { "x-api-key": API_KEY } : {})
         },
         body: JSON.stringify({ value: Number(val), label: label || null, meta: { userAgent: navigator.userAgent } })
       });
